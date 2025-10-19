@@ -40,7 +40,7 @@ Antes de começar, certifique-se de ter instalado:
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/Guiilopes97/ProjetoTCC.git
+git clone https://github.com/Guiilopes97/SmartConnect_ProjetoTCC.git
 cd ProjetoTCC
 ```
 
