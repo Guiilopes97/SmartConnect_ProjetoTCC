@@ -1,119 +1,322 @@
-# 🚀 SmartConnect - Aplicativo Multi-Plataforma com .NET MAUI
+# 🎓 Portal do Aluno UNISANTA - Aplicativo Multi-Plataforma
 
 ![.NET MAUI](https://img.shields.io/badge/.NET%20MAUI-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
+![XAML](https://img.shields.io/badge/XAML-0C54C2?style=for-the-badge&logo=xaml&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-> Uma solução moderna e elegante para desenvolvimento cross-platform, construída com o poder do .NET MAUI
+> 📱 Aplicativo multi-plataforma desenvolvido como Trabalho de Conclusão de Curso, integrando Portal do Aluno e Dashboard de COVID-19 usando .NET MAUI
 
 ## 📋 Sobre o Projeto
 
-O **SmartConnect** é uma aplicação multiplataforma desenvolvida como Trabalho de Conclusão de Curso (TCC), demonstrando as capacidades do framework .NET MAUI para criar aplicações nativas que rodam em diferentes sistemas operacionais a partir de um único código-fonte.
+O **Portal do Aluno UNISANTA** é um aplicativo mobile desenvolvido com **.NET MAUI** (Multi-platform App UI) que permite aos alunos acessarem o portal acadêmico da universidade e visualizarem dados atualizados sobre COVID-19 no Brasil. O projeto demonstra a capacidade de criar aplicações nativas para múltiplas plataformas a partir de um único código-base em C#.
 
-### ✨ Características Principais
+### 🎯 Objetivo do TCC
 
-- 📱 **Multi-Plataforma**: Um código, múltiplas plataformas (Android, iOS, Windows, macOS)
-- ⚡ **Performance Nativa**: Aproveita os recursos nativos de cada plataforma
-- 🎨 **Interface Moderna**: Design responsivo e intuitivo
-- 🔧 **Arquitetura Limpa**: Código organizado e de fácil manutenção
-- 🔒 **Seguro**: Implementação de boas práticas de segurança
+Desenvolver uma aplicação mobile multiplataforma que demonstre:
+- Integração com sistemas web existentes (WebView)
+- Consumo de APIs REST externas
+- Arquitetura MVVM (Model-View-ViewModel)
+- Navegação entre páginas
+- Verificação de conectividade
+- Interface responsiva e moderna
+
+## ✨ Funcionalidades
+
+### 🏠 Página Principal (MainPage)
+- ✅ Contador interativo com MVVM
+- ✅ Animações de imagem (rotação e movimento)
+- ✅ Menu de eventos com ActionSheet
+- ✅ Verificação de conectividade com internet
+- ✅ Navegação para outras páginas
+- ✅ Exibição de informações dos desenvolvedores
+
+### 📚 Portal do Aluno
+- ✅ Acesso direto ao Portal UNISANTA via WebView
+- ✅ Navegação completa dentro do portal
+- ✅ Suporte a conteúdo misto (HTTP/HTTPS)
+
+### 🦠 Dashboard COVID-19
+- ✅ Exibição de casos confirmados no Brasil
+- ✅ Estatísticas de óbitos
+- ✅ Consumo de API REST em tempo real
+- ✅ Interface visual intuitiva com cards
+- ✅ Ícones representativos dos dados
+
+### 🌐 Recursos Gerais
+- ✅ Verificação de conectividade antes de acessar recursos online
+- ✅ Alertas informativos ao usuário
+- ✅ Suporte a temas claro/escuro
+- ✅ Animações e transições suaves
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **.NET MAUI** - Framework principal para desenvolvimento multi-plataforma
+### Framework e Linguagens
+- **.NET 6.0**
+- **.NET MAUI** - Framework multi-plataforma
 - **C#** - Linguagem de programação
-- **XAML** - Markup para construção de interfaces
-- **MVVM Pattern** - Padrão de arquitetura Model-View-ViewModel
+- **XAML** - Markup para interfaces
+
+### Bibliotecas e Pacotes
+```xml
+<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+```
+
+### APIs Externas
+- **[COVID-19 Brazil API](https://covid19-brazil-api.now.sh/)** - Dados sobre COVID-19
+- **Portal UNISANTA** - Sistema acadêmico
+
+### Arquitetura
+- **MVVM Pattern** - Separação de responsabilidades
+- **Dependency Injection** - Injeção de dependências
+- **Observable Pattern** - Binding de dados
+- **Command Pattern** - Comandos reutilizáveis
 
 ## 📋 Pré-requisitos
 
-Antes de começar, certifique-se de ter instalado:
+### Software Necessário
 
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download) ou superior
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) (Windows/Mac) com workload ".NET Multi-platform App UI development"
-  - OU [Visual Studio Code](https://code.visualstudio.com/) com extensões C# e .NET MAUI
-- Para desenvolvimento Android: Android SDK (API Level 21 ou superior)
-- Para desenvolvimento iOS/macOS: Xcode (apenas em macOS)
+- **[Visual Studio 2022](https://visualstudio.microsoft.com/)** (Windows ou Mac)
+  - Workload: ".NET Multi-platform App UI development"
+- **[.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)** ou superior
 
-## 🚀 Como Executar
+### Para Desenvolvimento Android
+- Android SDK (API Level 21 ou superior)
+- Emulador Android ou dispositivo físico
 
-### 1. Clone o repositório
+### Para Desenvolvimento iOS (somente macOS)
+- Xcode 14 ou superior
+- Simulador iOS ou dispositivo físico
+
+### Para Desenvolvimento Windows
+- Windows 10 versão 1809 (build 17763) ou superior
+- Windows App SDK
+
+## 🚀 Como Executar o Projeto
+
+### 1️⃣ Clone o repositório
 
 ```bash
-git clone https://github.com/Guiilopes97/SmartConnect_ProjetoTCC.git
+git clone https://github.com/Guiilopes97/ProjetoTCC.git
 cd ProjetoTCC
 ```
 
-### 2. Restaure as dependências
+### 2️⃣ Abra o projeto
+
+- Abra o arquivo `ProjetoTCC.sln` no Visual Studio 2022
+
+### 3️⃣ Restaure os pacotes NuGet
 
 ```bash
 dotnet restore
 ```
 
-### 3. Execute o projeto
+### 4️⃣ Selecione a plataforma alvo
 
-**Para Windows:**
-```bash
-dotnet build -t:Run -f net8.0-windows10.0.19041.0
-```
+No Visual Studio, escolha a plataforma desejada na barra de ferramentas:
+- 🤖 Android Emulator
+- 🍎 iOS Simulator (apenas em Mac)
+- 🖥️ Windows Machine
 
-**Para Android:**
-```bash
-dotnet build -t:Run -f net8.0-android
-```
+### 5️⃣ Execute o projeto
 
-**Para iOS (requer macOS):**
-```bash
-dotnet build -t:Run -f net8.0-ios
-```
-
-**Para macOS:**
-```bash
-dotnet build -t:Run -f net8.0-maccatalyst
-```
+Pressione **F5** ou clique em "Start Debugging"
 
 ## 📁 Estrutura do Projeto
 
 ```
 ProjetoTCC/
-├── Models/              # Modelos de dados
-├── Views/               # Páginas e interfaces XAML
-├── ViewModels/          # Lógica de apresentação
-├── Services/            # Serviços e APIs
-├── Resources/           # Imagens, fontes, estilos
-├── Platforms/           # Código específico de plataforma
-│   ├── Android/
-│   ├── iOS/
-│   ├── Windows/
-│   └── MacCatalyst/
-└── App.xaml            # Configuração global do app
+├── 📂 Classes/
+│   ├── CovidData.cs          # Modelo de dados COVID
+│   └── DashboardService.cs   # Serviço de API
+│
+├── 📂 View/
+│   ├── MainPage.xaml         # Página principal
+│   ├── DetailPage.xaml       # Portal do aluno
+│   └── CovidPage.xaml        # Dashboard COVID
+│
+├── 📂 ViewModel/
+│   ├── MainViewModel.cs      # ViewModel principal
+│   ├── DetailViewModel.cs    # ViewModel do portal
+│   └── CovidViewModel.cs     # ViewModel COVID
+│
+├── 📂 Resources/
+│   ├── Images/               # Imagens do app
+│   ├── Styles/               # Estilos XAML
+│   └── Fonts/                # Fontes customizadas
+│
+├── 📂 Platforms/
+│   ├── Android/              # Código específico Android
+│   ├── iOS/                  # Código específico iOS
+│   ├── Windows/              # Código específico Windows
+│   └── MacCatalyst/          # Código específico macOS
+│
+├── App.xaml                  # Configuração global
+├── AppShell.xaml             # Shell de navegação
+└── MauiProgram.cs            # Ponto de entrada
 ```
 
-## 🧪 Executando Testes
+## 🎨 Capturas de Tela
 
-```bash
-dotnet test
-```
+### Página Principal
+- Interface com logo da UNISANTA
+- Botões de navegação
+- Contador interativo
+- Animações de imagem
+
+### Portal do Aluno
+- WebView integrado
+- Acesso completo ao portal
+- Navegação fluida
+
+### Dashboard COVID-19
+- Cards informativos
+- Dados em tempo real
+- Interface visual moderna
 
 ## 📱 Plataformas Suportadas
 
-| Plataforma | Versão Mínima | Status |
-|-----------|---------------|--------|
-| Android | 5.0 (API 21) | ✅ Suportado |
-| iOS | 11.0 | ✅ Suportado |
-| Windows | 10.0.17763.0 | ✅ Suportado |
-| macOS | 10.15 | ✅ Suportado |
+| Plataforma | Versão Mínima | Status | Testado |
+|-----------|---------------|--------|---------|
+| Android | 5.0 (API 21) | ✅ Suportado | ✅ Sim |
+| iOS | 14.2 | ✅ Suportado | ⚠️ Parcial |
+| Windows | 10 (build 17763) | ✅ Suportado | ✅ Sim |
+| macOS | 10.15 (Catalina) | ✅ Suportado | ⚠️ Parcial |
 
-## 🤝 Como Contribuir
+## 🔧 Configuração e Customização
 
-Contribuições são sempre bem-vindas! Para contribuir:
+### Alterar a API de COVID
 
-1. Faça um Fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um Pull Request
+No arquivo `CovidPage.xaml.cs`, modifique a URL:
+
+```csharp
+CovidData data = await service.GetCovidData("SUA_URL_AQUI");
+```
+
+### Alterar o Portal do Aluno
+
+No arquivo `DetailPage.xaml`, modifique o Source do WebView:
+
+```xml
+<WebView Source="SUA_URL_AQUI" />
+```
+
+### Personalizar Cores
+
+Edite o arquivo `Resources/Styles/Colors.xaml`:
+
+```xml
+<Color x:Key="Primary">#512BD4</Color>
+<Color x:Key="Secondary">#DFD8F7</Color>
+```
+
+## 📊 Arquitetura MVVM
+
+O projeto utiliza o padrão MVVM com auxílio do **CommunityToolkit.Mvvm**:
+
+```csharp
+// ViewModel
+[ObservableProperty]
+int count;
+
+[RelayCommand]
+void IncrementCount()
+{
+    Count += 10;
+}
+
+// XAML
+<Label Text="{Binding Count}" />
+<Button Command="{Binding IncrementCountCommand}" />
+```
+
+## 🔌 Consumo de API REST
+
+Exemplo de consumo da API COVID-19:
+
+```csharp
+HttpClient _client = new HttpClient();
+var response = await _client.GetAsync(query);
+if (response.IsSuccessStatusCode)
+{
+    var content = await response.Content.ReadAsStringAsync();
+    data = JsonConvert.DeserializeObject<CovidData>(content);
+}
+```
+
+## ✅ Funcionalidades Implementadas
+
+- [x] Navegação entre páginas usando Shell
+- [x] MVVM com CommunityToolkit
+- [x] Injeção de dependências
+- [x] Consumo de API REST
+- [x] WebView para conteúdo externo
+- [x] Verificação de conectividade
+- [x] Animações XAML
+- [x] ActionSheet e Alerts
+- [x] Data Binding
+- [x] Themes (Light/Dark)
+
+## 👥 Equipe de Desenvolvimento
+
+### Desenvolvedores
+
+| RA | Nome | Papel |
+|----|------|-------|
+| 188648 | **Guilherme Lopes de Oliveira** | Desenvolvedor Principal |
+| 185378 | Thiago Ikenaga Suzuki | Desenvolvedor |
+| 190718 | Pedro Henrique de Jesus Barbosa | Desenvolvedor |
+| 150184 | Ramon Fisher de Paula Conceição | Desenvolvedor |
+
+### Instituição
+
+**Universidade Santa Cecília (UNISANTA)**
+- Curso: Sistemas de Informação
+- Ano: 2020/2023
+
+## 📚 Referências e Recursos
+
+### Documentação Oficial
+- [📖 .NET MAUI Documentation](https://learn.microsoft.com/dotnet/maui/)
+- [📘 CommunityToolkit.Mvvm](https://learn.microsoft.com/dotnet/communitytoolkit/mvvm/)
+- [📗 XAML Documentation](https://learn.microsoft.com/dotnet/desktop/xaml/)
+
+### APIs Utilizadas
+- [🦠 COVID-19 Brazil API](https://covid19-brazil-api.now.sh/)
+- [🎓 Portal UNISANTA](https://portalaluno.unisanta.br/)
+
+### Tutoriais e Cursos
+- [Microsoft Learn - MAUI](https://learn.microsoft.com/training/paths/build-apps-with-dotnet-maui/)
+- [.NET MAUI Workshop](https://github.com/dotnet-presentations/dotnet-maui-workshop)
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto foi desenvolvido para fins acadêmicos como Trabalho de Conclusão de Curso.
+
+## 📞 Contato
+
+**Guilherme Lopes de Oliveira**
+
+- GitHub: [@Guiilopes97](https://github.com/Guiilopes97)
+- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
+- Email: guilherme.lopes@exemplo.com
+
+## 🙏 Agradecimentos
+
+- 🎓 **UNISANTA** - Universidade Santa Cecília
+- 👥 **Equipe** - Pela colaboração e dedicação
+
+---
+
+<div align="center">
+
+⭐ **Se este projeto foi útil para você, considere dar uma estrela!**
+
+**Desenvolvido com 💜 por alunos da UNISANTA**
+
+![UNISANTA](https://img.shields.io/badge/UNISANTA-TCC%202023-blue?style=for-the-badge)
+
+</div>
